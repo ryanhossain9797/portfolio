@@ -1,3 +1,9 @@
+:root {
+    --light-card-color: #9DB375;
+    --dark-card-color: #2B3C2C;
+    --binder-background-color: #E2E8BC;
+}
+
 body {
     background-color: #1E241F;
     font-family: 'Inter', sans-serif;
@@ -8,10 +14,10 @@ body {
 }
 
 .binder-page {
-    background-color: #E8EAE3; /* Light paper color */
-    max-width: 900px;
+    background-color: var(--binder-background-color); /* Light paper color */
+    max-width: 1600px; /* Even further increased width */
     margin: 2rem auto; /* Adjusted margin to show dark background */
-    padding: 3rem;
+    padding: 3rem 4rem; /* Increased horizontal padding */
     flex-grow: 1; /* Allow to grow vertically */
     border-radius: 4px; /* Slight rounded corners for the page */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Shadow for the page */
@@ -20,63 +26,91 @@ body {
 
 header {
     text-align: left;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem; /* Increased margin */
     border-bottom: 1px solid #c0c0c0; /* Lighter border for the light page */
-    padding-bottom: 1.5rem;
+    padding-bottom: 3rem; /* Further Increased padding */
+}
+
+/* Specific styling for section headers */
+.experience-section header h1,
+.projects-section header h1 {
+    font-size: 2.2rem; /* Smaller than main H1 */
+    margin-bottom: 1.5rem; /* Adjusted margin */
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 4.5rem; /* Much bigger font size */
     font-weight: 700;
     margin: 0;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.02em; /* Increased letter spacing */
     color: #212529; /* Darker color for header on light background */
 }
 
 h2 {
-    font-size: 1.1rem;
+    font-size: 1.8rem; /* Much bigger font size */
     font-weight: 400;
-    margin: 0;
+    margin: 0.5rem 0 0 0; /* Added top margin */
+    letter-spacing: 0.05em; /* Increased letter spacing */
     color: #666; /* Slightly darker color for subtitle on light background */
 }
 
-main {
-    width: 100%;
+/* Consistent container for card lists */
+.card-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modifier class for the "bleed" effect */
+.card-list--bleed {
+    margin-left: -6rem; /* Extend left */
+    margin-right: -6rem; /* Extend right */
+    /* Removed padding-left and padding-right to enable bleed */
 }
 
 .card {
-    padding: 2.5rem;
-    margin-bottom: 2rem;
-    border: 1px solid #4a5c4e;
+    padding: 3.5rem; /* Increased padding */
+    margin-bottom: 2.5rem; /* Increased margin */
+    border: none; /* Remove borders from all cards */
     border-radius: 4px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 75%; /* Set card width */
+    color: var(--binder-background-color); /* Default text color for dark cards */
+}
+
+/* Generic alternating alignment for any card list */
+.card-list .card:nth-child(even) {
+    align-self: flex-end;
+}
+
+.card-list .card:nth-child(odd) {
+    align-self: flex-start;
 }
 
 .card-dark {
-    background-color: #2C3A2F;
-    border-color: #37453d;
+    background-color: var(--dark-card-color);
 }
 
 .card-medium {
-    background-color: #37453d;
-    border-color: #4a5c4e;
+    background-color: var(--light-card-color);
+    color: #000000; /* Black text for light cards */
 }
 
 .card h3 {
     margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
+    margin-bottom: 0.8rem; /* Increased margin */
+    font-size: 1.4rem; /* Increased font size */
     font-weight: 700;
-    color: #E8EAE3; /* Light text for card headers */
+    letter-spacing: 0.03em; /* Increased letter spacing */
+    /* Color handled by parent .card or specific .card-medium */
 }
 
 .card p {
-    margin-bottom: 0;
-    line-height: 1.7;
-    color: #b0b0b0; /* Light text for card paragraphs */
+    margin-bottom: 0.5rem; /* Added margin */
+    line-height: 1.8; /* Increased line height */
+    /* Color handled by parent .card or specific .card-medium */
 }
 
 .card p strong {
     font-weight: 500;
-    color: #E8EAE3; /* Light text for strong tags in cards */
+    /* Color handled by parent .card or specific .card-medium */
 }

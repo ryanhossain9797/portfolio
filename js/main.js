@@ -2,7 +2,7 @@ const workExperienceData = [
     {
         title: "Technical Lead, Geographic Information Systems (GIS) Team",
         company: "Chaldal",
-        dates: "08/2024 - 01/2026",
+        dates: "08/2024 - 12/2025",
         description: "Leading development of Chaldal's GIS platform for logistics and delivery optimization, eliminating last mile address issues that require customer contact, which account for 20% of delivery delays. Integrated OpenStreetMap data and enabled mapping agents to augment building data with key attributes. Implemented address management and AI-powered building tagging and issue detection features to pre-emptively flag suspicious data.",
         tech: "F#, C#, .NET Core, Python, SQL Server, Redis, OpenStreetMaps, Docker, React Leaflet, Azure DevOps"
     },
