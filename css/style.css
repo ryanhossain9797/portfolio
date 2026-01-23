@@ -1,0 +1,82 @@
+body {
+    background-color: #1E241F;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.binder-page {
+    background-color: #E8EAE3; /* Light paper color */
+    max-width: 900px;
+    margin: 2rem auto; /* Adjusted margin to show dark background */
+    padding: 3rem;
+    flex-grow: 1; /* Allow to grow vertically */
+    border-radius: 4px; /* Slight rounded corners for the page */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Shadow for the page */
+    color: #3d3d3d; /* Dark text for the light background */
+}
+
+header {
+    text-align: left;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid #c0c0c0; /* Lighter border for the light page */
+    padding-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.5px;
+    color: #212529; /* Darker color for header on light background */
+}
+
+h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+    color: #666; /* Slightly darker color for subtitle on light background */
+}
+
+main {
+    width: 100%;
+}
+
+.card {
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid #4a5c4e;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-dark {
+    background-color: #2C3A2F;
+    border-color: #37453d;
+}
+
+.card-medium {
+    background-color: #37453d;
+    border-color: #4a5c4e;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #E8EAE3; /* Light text for card headers */
+}
+
+.card p {
+    margin-bottom: 0;
+    line-height: 1.7;
+    color: #b0b0b0; /* Light text for card paragraphs */
+}
+
+.card p strong {
+    font-weight: 500;
+    color: #E8EAE3; /* Light text for strong tags in cards */
+}
