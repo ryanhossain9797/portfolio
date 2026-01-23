@@ -23,18 +23,28 @@ body {
     color: #3d3d3d; /* Dark text for the light background */
 }
 
-header {
+/* Main page header */
+.binder-page > header {
     text-align: left;
-    margin-bottom: 5rem; /* Increased margin */
-    border-bottom: 1px solid #c0c0c0; /* Lighter border for the light page */
-    padding-bottom: 3rem; /* Further Increased padding */
+    margin-bottom: 2rem; /* Reduced margin */
+    border-bottom: 1px solid #c0c0c0; /* Keep main header underline */
+    padding-bottom: 1rem; /* Reduced padding */
+}
+
+/* Section headers */
+.experience-section > header,
+.projects-section > header {
+    border-bottom: none; /* Remove underline from section headers */
+    padding-bottom: 0.5rem; /* Small padding */
+    margin-bottom: 2rem; /* Increase margin for more spacing */
 }
 
 /* Specific styling for section headers */
-.experience-section header h1,
-.projects-section header h1 {
+.experience-section header h2,
+.projects-section header h2 {
     font-size: 2.2rem; /* Smaller than main H1 */
-    margin-bottom: 1.5rem; /* Adjusted margin */
+    margin-bottom: 0.5rem; /* Reduced margin */
+    border: none; /* Remove underline */
 }
 
 h1 {
