@@ -87,11 +87,11 @@ h2 {
 }
 
 /* Generic alternating alignment for any card list */
-.card-list .card:nth-child(even) {
+.card-list .card:nth-child(even):not(.card-subproject) {
     align-self: flex-end;
 }
 
-.card-list .card:nth-child(odd) {
+.card-list .card:nth-child(odd):not(.card-subproject) {
     align-self: flex-start;
 }
 
@@ -122,4 +122,60 @@ h2 {
 .card p strong {
     font-weight: 500;
     /* Color handled by parent .card or specific .card-medium */
+}
+
+/* Company header styling (not a card) */
+.company-header {
+    margin: 2rem 0 1rem 6rem; /* Add left margin to account for bleed */
+    padding: 0;
+}
+
+.company-header h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #3d3d3d;
+    letter-spacing: 0.03em;
+}
+
+.company-header p {
+    margin: 0;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Project header styling (not a card) */
+.project-header {
+    margin: 1.5rem 0 1rem calc(6rem + 2rem); /* Account for bleed + indentation */
+    padding: 0;
+}
+
+.project-header h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #3d3d3d;
+    letter-spacing: 0.03em;
+}
+
+.project-header p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Subproject card styling */
+.card-subproject {
+    margin-left: calc(2rem - 2rem); /* Start at project header position, then extend left */
+    margin-bottom: 1.5rem;
+    width: calc(75% + 2rem); /* Wider to allow left bleed */
+    padding-left: calc(3.5rem + 2rem); /* Extra padding on left to maintain content alignment */
+}
+
+.card-subproject h4 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
 }
