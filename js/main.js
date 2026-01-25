@@ -81,7 +81,7 @@ const personalProjects = [
 ];
 
 function generateWorkExperience(workExperienceData, container) {
-    let cardIndex = 0; // Track overall card index for alternating
+    let projectIndex = 0; // Track project index for alternating (scoped to project)
     
     workExperienceData.forEach((company, companyIndex) => {
         // Company header (not a card, just a header)
@@ -95,25 +95,30 @@ function generateWorkExperience(workExperienceData, container) {
         container.appendChild(companyHeader);
         
         // Projects within company
-        company.projects.forEach((project, projectIndex) => {
-            // Project header (not a card, just a header)
+        company.projects.forEach((project) => {
+            // Determine alignment for this entire project (all subprojects and header)
+            const projectAlignment = projectIndex % 2 === 0 ? 'flex-start' : 'flex-end';
+            const projectCardColorClass = projectIndex % 2 === 0 ? 'card-dark' : 'card-medium';
+            
+            // Project header (not a card, just a header) - align with cards
             const projectHeader = document.createElement('div');
             projectHeader.classList.add('project-header');
+            if (projectAlignment === 'flex-end') {
+                projectHeader.style.marginLeft = 'auto';
+            }
             projectHeader.innerHTML = `
                 <h4>${project.name}</h4>
                 <p><strong>${project.title}</strong> | ${project.dates}</p>
             `;
             container.appendChild(projectHeader);
             
-            // Determine alignment for all subprojects in this project
-            const projectAlignment = cardIndex % 2 === 0 ? 'flex-start' : 'flex-end';
-            const projectCardColorClass = cardIndex % 2 === 0 ? 'card-dark' : 'card-medium';
-            
-            // Subprojects as individual cards
+            // Subprojects as individual cards - all use same alignment
             project.subProjects.forEach((subProject) => {
                 const subProjectCard = document.createElement('div');
                 subProjectCard.classList.add('card', 'card-subproject', projectCardColorClass);
-                subProjectCard.style.alignSelf = projectAlignment;
+                if (projectAlignment === 'flex-end') {
+                    subProjectCard.style.marginLeft = 'auto';
+                }
                 
                 const techLine = subProject.tech ? `<p><em>${subProject.tech}</em></p>` : '';
                 const projectNameLine = subProject.projectName ? `<h4>${subProject.projectName}</h4>` : '';
@@ -125,8 +130,9 @@ function generateWorkExperience(workExperienceData, container) {
                 `.trim();
                 
                 container.appendChild(subProjectCard);
-                cardIndex++;
             });
+            
+            projectIndex++; // Increment after processing all subprojects in this project
         });
     });
 }

@@ -126,7 +126,10 @@ h2 {
 
 /* Company header styling (not a card) */
 .company-header {
-    margin: 2rem 0 1rem 6rem; /* Add left margin to account for bleed */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
 }
 
@@ -136,6 +139,7 @@ h2 {
     margin: 0 0 0.5rem 0;
     color: #3d3d3d;
     letter-spacing: 0.03em;
+    text-align: center;
 }
 
 .company-header p {
@@ -144,9 +148,9 @@ h2 {
     font-size: 1rem;
 }
 
-/* Project header styling (not a card) */
+
 .project-header {
-    margin: 1.5rem 0 1rem calc(6rem + 2rem); /* Account for bleed + indentation */
+    margin: 1.5rem 4rem 1rem 4rem;
     padding: 0;
 }
 
