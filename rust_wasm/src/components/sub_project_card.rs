@@ -1,3 +1,4 @@
+use comrak::markdown_to_html;
 use yew::prelude::*;
 use crate::data::SubProject;
 
@@ -8,12 +9,18 @@ pub struct Props {
     pub color_class: String,
 }
 
+fn render_markdown(md: &str) -> Html {
+    let options = comrak::Options::default();
+    let html = markdown_to_html(md, &options);
+    // Use Html::from_html_unchecked to render raw HTML
+    Html::from_html_unchecked(AttrValue::from(html))
+}
+
 #[function_component(SubProjectCard)]
 pub fn sub_project_card(props: &Props) -> Html {
     let sub_project = &props.sub_project;
-    let description_lines: Vec<&str> = sub_project.description.lines().collect();
     let color_class = if props.color_class.is_empty() {
-        "card-dark".to_string()
+        "card-left".to_string()
     } else {
         props.color_class.clone()
     };
@@ -27,13 +34,7 @@ pub fn sub_project_card(props: &Props) -> Html {
             } else {
                 html! {}
             }}
-            <div class="description">
-                {description_lines.iter().filter(|line| !line.is_empty()).map(|line| {
-                    html! {
-                        <p>{ *line }</p>
-                    }
-                }).collect::<Html>()}
-            </div>
+            <div class="description">{ render_markdown(&sub_project.description) }</div>
             {if let Some(ref tech) = sub_project.tech {
                 html! {
                     <p><em>{ tech }</em></p>
