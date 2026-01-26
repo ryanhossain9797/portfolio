@@ -1,4 +1,4 @@
-import { Company } from '../data';
+import { Company } from '../data.js';
 
 /**
  * Creates and returns an HTMLElement representing a company header.

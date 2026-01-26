@@ -1,5 +1,5 @@
-import { PersonalProject } from '../data';
-import { marked } from 'marked';
+import { PersonalProject } from '../data.js';
+import { marked } from '../marked.esm.js';
 
 /**
  * Creates and returns an HTMLElement representing a single personal project card.

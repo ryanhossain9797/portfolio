@@ -1,4 +1,4 @@
-import { Project } from '../data';
+import { Project } from '../data.js';
 
 /**
  * Creates and returns an HTMLElement representing a project header.

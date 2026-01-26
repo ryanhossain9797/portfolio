@@ -1,7 +1,6 @@
 import { workExperience, personalProjects, Company, PersonalProject } from './data.js';
-import { createCompanyHeader } from './components/companyHeader';
-import { createProjectHeader } from './components/projectHeader';
-import { marked } from './marked.esm.js';
+import { createCompanyHeader } from './components/companyHeader.js';
+import { createProjectHeader } from './components/projectHeader.js';
 import { createSubProjectCard } from './components/subProjectCard.js';
 import { createPersonalProjectCard } from './components/personalProjectCard.js';
 

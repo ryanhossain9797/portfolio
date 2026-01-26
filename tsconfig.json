@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     // File Layout
-    "rootDir": "./", // All source files are in the root or subfolders
+    "rootDir": "./src", // All source files are in the root or subfolders
     "outDir": "./dist", // Output compiled JS files to a 'dist' directory
 
     // Environment Settings
-    "module": "esnext", // Use ES module syntax
+    "module": "NodeNext", // Use ES module syntax
     "target": "es2020", // Compile to ES2020 JavaScript
     "esModuleInterop": true, // Allow default imports from modules with no default export. This is important for libraries like marked.
     "forceConsistentCasingInFileNames": true, // Ensure consistent file naming
@@ -20,11 +20,11 @@
     "checkJs": false, // Disable checking JavaScript files as we convert to TypeScript
     "jsx": "react-jsx", // Keep if it was there and is actually needed
     "isolatedModules": true, // Helps catch issues where files are not true modules
-    "moduleResolution": "node" // How modules are resolved
+    "moduleResolution": "NodeNext" // How modules are resolved
   },
   "include": [
-    "./**/*.ts", // Only include TypeScript files for compilation
-    "./**/*.tsx" // Include tsx files if there is a plan to use React/JSX
+    "./src/**/*.ts", // Only include TypeScript files for compilation
+    "./src/**/*.tsx" // Include tsx files if there is a plan to use React/JSX
   ],
   "exclude": [
     "node_modules",

@@ -1,5 +1,5 @@
-import { Company, SubProject } from '../data';
-import { marked } from '../marked.esm';
+import { Company, SubProject } from '../data.js';
+import { marked } from '../marked.esm.js';
 
 /**
  * Creates and returns an HTMLElement representing a company header.
