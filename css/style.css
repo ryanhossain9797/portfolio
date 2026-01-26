@@ -87,8 +87,13 @@ h2 {
     margin-bottom: 2.5rem; /* Increased margin */
     border: none; /* Remove borders from all cards */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Offset shadow for raised effect */
-    width: 75%; /* Set card width */
-    color: var(--binder-background-color); /* Default text text for dark cards */
+    transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0,0,0,0.10);
+    transform: translate(5px, 5px) scale(1.025);
+    /* Keep width and color unchanged on hover */
 }
 
 /* Generic alternating alignment for any card list */
@@ -102,6 +107,7 @@ h2 {
 
 .card-dark {
     background-color: var(--dark-card-color);
+    color: var(--binder-background-color); /* Restore original text color for dark cards */
 }
 
 .card-medium {
