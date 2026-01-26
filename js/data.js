@@ -49,7 +49,7 @@ export const workExperience = [
                 ]
             },
             {
-                name: "Pharmacy & Warehouse Systems",
+                name: "Pharmacy & Warehouse Operations",
                 title: "Software Engineer",
                 dates: "07/2020 - 06/2022",
                 subProjects: [
@@ -57,6 +57,14 @@ export const workExperience = [
                         projectName: "Chaldal Pharmacy",
                         description: `
 - Architected Chaldal Pharmacy, handling 1000+ daily pharmacy orders with specialized pharmaceutical constraints.
+- Managed delicate access requirements for Rx and other categories, frozen items, and special QC environments for medication.
+- Implemented cross-warehouse movement to transfer pharmacy goods for last-mile delivery.
+                        `,
+                        tech: "C#, .NET Core, Entity Framework, SQL Server, Azure DevOps"
+                    },
+                    {
+                        projectName: "Warehouse Management",
+                        description: `  
 - Led development of Chaldal's massive export warehouse project at Hemayetpur.
 - Reimplemented stock requirement prediction algorithm in raw SQL to improve performance by 3x and accuracy by 10%.
                         `,
