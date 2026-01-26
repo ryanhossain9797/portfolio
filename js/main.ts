@@ -1,5 +1,5 @@
-import { workExperience, personalProjects, Company, PersonalProject } from './data';
-import { marked } from 'marked';/**
+import { workExperience, personalProjects, Company, PersonalProject } from './data.js';
+import { marked } from './marked.esm.js';
 
 function generateWorkExperience(workExperienceData: Company[], container: HTMLElement) {
     
@@ -82,5 +82,5 @@ function generateCards(data: PersonalProject[], container: HTMLElement, useTechI
 const experienceContainer = document.getElementById('experience-container');
 const projectsContainer = document.getElementById('projects-container');
 
-generateWorkExperience(workExperience, experienceContainer);
-generateCards(personalProjects, projectsContainer, false);
+generateWorkExperience(workExperience, experienceContainer!);
+generateCards(personalProjects, projectsContainer!, false);
