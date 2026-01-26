@@ -2,7 +2,6 @@ import { workExperience, personalProjects } from './data.js';
 import { marked } from './marked.esm.js';
 
 function generateWorkExperience(workExperienceData, container) {
-    let projectIndex = 0; // Track project index for alternating (scoped to project)
     
     workExperienceData.forEach((company, companyIndex) => {
         // Company header (not a card, just a header)
@@ -12,16 +11,12 @@ function generateWorkExperience(workExperienceData, container) {
             <h3>${company.companyName}</h3>
             <p><strong>${company.startDate} - ${company.endDate}</strong></p>
         `;
-        
         container.appendChild(companyHeader);
         
-        // Projects within company
-        company.projects.forEach((project) => {
-            // Determine alignment for this entire project (all subprojects and header)
+        company.projects.forEach((project, projectIndex) => {
             const projectAlignment = projectIndex % 2 === 0 ? 'flex-start' : 'flex-end';
             const projectCardColorClass = projectIndex % 2 === 0 ? 'card-dark' : 'card-medium';
             
-            // Project header (not a card, just a header) - align with cards
             const projectHeader = document.createElement('div');
             projectHeader.classList.add('project-header');
             if (projectAlignment === 'flex-end') {
