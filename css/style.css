@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Oxanium Variable';
+    src: url('fonts/oxanium_variable.ttf') format('truetype');
+    font-weight: 200 900; /* Assuming it's a variable font with a wide weight range */
+    font-display: swap; /* Improve page load performance */
+}
+
 :root {
     --light-card-color: #9DB375;
     --dark-card-color: #2B3C2C;
@@ -6,7 +13,7 @@
 
 body {
     background-color: #1E241F;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Oxanium Variable', sans-serif;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -49,7 +56,7 @@ body {
 
 h1 {
     font-size: 4.5rem; /* Much bigger font size */
-    font-weight: 700;
+    font-weight: 200;
     margin: 0;
     letter-spacing: 0.02em; /* Increased letter spacing */
     color: #212529; /* Darker color for header on light background */
@@ -57,7 +64,7 @@ h1 {
 
 h2 {
     font-size: 1.8rem; /* Much bigger font size */
-    font-weight: 400;
+    font-weight: 200;
     margin: 0.5rem 0 0 0; /* Added top margin */
     letter-spacing: 0.05em; /* Increased letter spacing */
     color: #666; /* Slightly darker color for subtitle on light background */
@@ -108,7 +115,7 @@ h2 {
     margin-top: 0;
     margin-bottom: 0.8rem; /* Increased margin */
     font-size: 1.4rem; /* Increased font size */
-    font-weight: 700;
+    font-weight: 200;
     letter-spacing: 0.03em; /* Increased letter spacing */
     /* Color handled by parent .card or specific .card-medium */
 }
@@ -120,7 +127,7 @@ h2 {
 }
 
 .card p strong {
-    font-weight: 500;
+    font-weight: 200;
     /* Color handled by parent .card or specific .card-medium */
 }
 
@@ -135,7 +142,7 @@ h2 {
 
 .company-header h3 {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 200;
     margin: 0 0 0.5rem 0;
     color: #3d3d3d;
     letter-spacing: 0.03em;
@@ -156,7 +163,7 @@ h2 {
 
 .project-header h4 {
     font-size: 1.3rem;
-    font-weight: 700;
+    font-weight: 200;
     margin: 0 0 0.5rem 0;
     color: #3d3d3d;
     letter-spacing: 0.03em;
@@ -180,6 +187,6 @@ h2 {
     margin-top: 0;
     margin-bottom: 0.8rem;
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 200;
     letter-spacing: 0.03em;
 }
