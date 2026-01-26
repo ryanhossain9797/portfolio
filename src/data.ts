@@ -18,11 +18,7 @@ export interface Company {
     projects: Project[];
 }
 
-export interface PersonalProject {
-    title: string;
-    description: string;
-    tech: string;
-}
+
 
 export const workExperience: Company[] = [
     {
@@ -111,6 +107,7 @@ export const workExperience: Company[] = [
                 dates: "03/2020 - 06/2020",
                 subProjects: [
                     {
+                        projectName: "Mobile App",
                         description: `
 - Developed and maintained Upskill, a mobile app for learning and skill development.
                         `,
@@ -122,9 +119,9 @@ export const workExperience: Company[] = [
     }
 ];
 
-export const personalProjects: PersonalProject[] = [
+export const personalProjects: SubProject[] = [
     {
-        title: "Home Automation Chatbot",
+        projectName: "Home Automation Chatbot",
         description: `
 - Built a cross-platform chatbot for home automation on Discord and Telegram using Ollama.
 - Implemented an actor-based state machine architecture using Tokio tasks and mpsc channels.
@@ -133,7 +130,7 @@ export const personalProjects: PersonalProject[] = [
         tech: "Rust, Tokio, Ollama, Gemini Api, Docker, Serenity, Telebot, MongoDB"
     },
     {
-        title: "Home Server Infrastructure",
+        projectName: "Home Server Infrastructure",
         description: `
 - Personal home server running 10+ services, including local LLMs on Docker containers inside Proxmox VMs.
 - Implemented CI/CD pipeline using Azure DevOps.

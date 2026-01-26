@@ -1,8 +1,7 @@
-import { workExperience, personalProjects, Company, PersonalProject } from './data.js';
+import { workExperience, personalProjects, Company, SubProject } from './data.js';
 import { createCompanyHeader } from './components/companyHeader.js';
 import { createProjectHeader } from './components/projectHeader.js';
 import { createSubProjectCard } from './components/subProjectCard.js';
-import { createPersonalProjectCard } from './components/personalProjectCard.js';
 
 function generateWorkExperience(workExperienceData: Company[], container: HTMLElement) {
     
@@ -27,11 +26,11 @@ function generateWorkExperience(workExperienceData: Company[], container: HTMLEl
     });
 }
 
-function generatePersonalProjects(data: PersonalProject[], container: HTMLElement, useTechInDate: boolean = false) {
+function generatePersonalProjects(data: SubProject[], container: HTMLElement, useTechInDate: boolean = false) {
     data.forEach((item, index) => {
         const cardColorClass = index % 2 === 0 ? 'card-dark' : 'card-medium';
-        const card = createPersonalProjectCard(item, cardColorClass);
-
+        const projectAlignment = index % 2 === 0 ? 'flex-start' : 'flex-end';
+        const card = createSubProjectCard(item, cardColorClass, projectAlignment);
         container.appendChild(card);
     });
 }
