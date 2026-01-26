@@ -97,20 +97,20 @@ h2 {
 }
 
 /* Generic alternating alignment for any card list */
-.card-list .card:nth-child(even) {
-    align-self: flex-end;
-}
-
-.card-list .card:nth-child(odd) {
+.card-list .card-left {
     align-self: flex-start;
 }
 
-.card-dark {
+.card-list .card-right {
+    align-self: flex-end;
+}
+
+.card-left {
     background-color: var(--dark-card-color);
     color: var(--binder-background-color); /* Restore original text color for dark cards */
 }
 
-.card-medium {
+.card-right {
     background-color: var(--light-card-color);
     color: #000000; /* Black text for light cards */
 }

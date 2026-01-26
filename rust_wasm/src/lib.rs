@@ -31,7 +31,7 @@ pub fn app() -> Html {
                             <>
                                 <CompanyHeader company={company.clone()} />
                                 {company.projects.iter().enumerate().map(|(project_index, project)| {
-                                    let project_color = if project_index % 2 == 0 { "card-dark" } else { "card-medium" };
+                                    let project_color = if project_index % 2 == 0 { "card-left" } else { "card-right" };
                                     html! {
                                         <>
                                             <ProjectHeader project={project.clone()} />
@@ -58,7 +58,7 @@ pub fn app() -> Html {
                 </header>
                 <div id="projects-container" class="card-list card-list--bleed">
                     {personal_projects.iter().enumerate().map(|(index, project)| {
-                        let project_color = if index % 2 == 0 { "card-dark" } else { "card-medium" };
+                        let project_color = if index % 2 == 0 { "card-left" } else { "card-right" };
                         html! {
                             <SubProjectCard 
                                 sub_project={project.clone()} 
