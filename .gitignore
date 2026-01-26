@@ -1,2 +1,7 @@
-.vercel
-dist/
+/dist
+/pkg
+/target
+*.wasm
+*.js
+*.d.ts
+*.log
