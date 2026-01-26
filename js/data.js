@@ -11,12 +11,20 @@ export const workExperience = [
                 subProjects: [
                     {
                         projectName: "GIS Platform",
-                        description: "Leading development of Chaldal's GIS platform for logistics and delivery optimization, eliminating last mile address issues that require customer contact, which account for 20% of delivery delays. Integrated OpenStreetMap data and enabled mapping agents to augment building data with key attributes. Implemented address management and AI-powered building tagging and issue detection features to pre-emptively flag suspicious data.",
+                        description: `
+- Led development of Chaldal's GIS platform for logistics and delivery optimization.
+- Eliminated last mile address issues, reducing delivery delays by 20%.
+- Integrated OpenStreetMap data and augmented building data with key attributes using mapping agents.
+- Implemented address management and AI-powered building tagging and issue detection features to pre-emptively flag suspicious data.
+                        `,
                         tech: "F#, C#, .NET Core, Python, SQL Server, Redis, OpenStreetMaps, Docker, React Leaflet, Azure DevOps"
                     },
                     {
                         projectName: "Self Hosted OSM Server",
-                        description: "Developed a self hosted OSM server to avoid dependency on public servers and improve performance. The server is hosted on a dedicated server and is accessible to the entire team.",
+                        description: `
+- Developed a self-hosted OSM server to eliminate dependency on public servers and enhance performance.
+- Hosted on a dedicated server, ensuring accessibility for the entire team.
+                        `,
                         tech: "Linux, OSM, Docker, Azure DevOps"
                     }
                 ]
@@ -28,7 +36,14 @@ export const workExperience = [
                 subProjects: [
                     {
                         projectName: "ChaldalPay",
-                        description: "Led development of ChaldalPay e-wallet and unified payment gateway, integrating multiple banks, merchants, and utility providers to process 5000+ daily transactions, reduce processing time by 40%, and cut payment charges by 2%. Architected distributed payment gateway using Subject, Chaldal's in house distributed framework built with F# and Microsoft Orleans, achieving 99.99% uptime and transaction lock free concurrency while leading a team of 4 engineers. Led security compliance initiatives including PCI-DSS and Bangladesh Bank audits.",
+                        description: `
+- Led development of ChaldalPay e-wallet and unified payment gateway.
+- Integrated multiple banks, merchants, and utility providers, processing 5000+ daily transactions.
+- Reduced processing time by 40% and cut payment charges by 2%.
+- Architected distributed payment gateway using Subject (Chaldal's in-house F# and Microsoft Orleans framework), achieving 99.99% uptime and transaction lock-free concurrency.
+- Led a team of 4 engineers.
+- Led security compliance initiatives including PCI-DSS and Bangladesh Bank audits.
+                        `,
                         tech: "F#, C#, Subject, Microsoft Orleans, SQL Server, Docker, Azure DevOps"
                     }
                 ]
@@ -40,7 +55,11 @@ export const workExperience = [
                 subProjects: [
                     {
                         projectName: "Chaldal Pharmacy",
-                        description: "Architected Chaldal Pharmacy, handling 1000+ daily pharmacy orders with specialized pharmaceutical constraints. This project was a major milestone for Chaldal, as it was the first time they were entering the medicine delivery space. Led development of Chaldal's massive export warehouse project at Hemayetpur. Reimplemented stock requirement prediction alogrithm in raw SQL to improve performance by 3x and accuracy by 10%.",
+                        description: `
+- Architected Chaldal Pharmacy, handling 1000+ daily pharmacy orders with specialized pharmaceutical constraints.
+- Led development of Chaldal's massive export warehouse project at Hemayetpur.
+- Reimplemented stock requirement prediction algorithm in raw SQL to improve performance by 3x and accuracy by 10%.
+                        `,
                         tech: "C#, .NET Core, Entity Framework, SQL Server, Azure DevOps"
                     }
                 ]
@@ -58,7 +77,9 @@ export const workExperience = [
                 dates: "03/2020 - 06/2020",
                 subProjects: [
                     {
-                        description: "Developed and maintained Upskill, a mobile app for learning and skill development.",
+                        description: `
+- Developed and maintained Upskill, a mobile app for learning and skill development.
+                        `,
                         tech: "Flutter, Dart, Golang, PostgreSQL"
                     }
                 ]
@@ -70,12 +91,19 @@ export const workExperience = [
 export const personalProjects = [
     {
         title: "Home Automation Chatbot",
-        description: "Built a cross-platform chatbot for home automation on Discord and Telegram leveraging Ollama. Implemented an actor based state machine architecture using Tokio tasks and mpsc channels. Achieved over 95% intent recognition and tool call accuracy with Local Ollama and Gemini Api models.",
+        description: `
+- Built a cross-platform chatbot for home automation on Discord and Telegram using Ollama.
+- Implemented an actor-based state machine architecture using Tokio tasks and mpsc channels.
+- Achieved over 95% intent recognition and tool call accuracy with Local Ollama and Gemini API models.
+        `,
         tech: "Rust, Tokio, Ollama, Gemini Api, Docker, Serenity, Telebot, MongoDB"
     },
     {
         title: "Home Server Infrastructure",
-        description: "Personal home server with 10+ services including local LLMs on Docker containers inside Proxmox VMs. Implemented CI/CD pipeline using Azure DevOps.",
+        description: `
+- Personal home server running 10+ services, including local LLMs on Docker containers inside Proxmox VMs.
+- Implemented CI/CD pipeline using Azure DevOps.
+        `,
         tech: "Proxmox, Docker, Ollama, ROCm, RouterOS, Wireguard, Azure Pipelines, Windows Server, Clickhouse, Grafana"
     }
 ];

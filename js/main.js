@@ -1,4 +1,5 @@
 import { workExperience, personalProjects } from './data.js';
+import { marked } from './marked.esm.js';
 
 function generateWorkExperience(workExperienceData, container) {
     let projectIndex = 0; // Track project index for alternating (scoped to project)
@@ -45,7 +46,7 @@ function generateWorkExperience(workExperienceData, container) {
                 
                 subProjectCard.innerHTML = `
                     ${projectNameLine}
-                    <p>${subProject.description}</p>
+                    ${marked.parse(subProject.description)}
                     ${techLine}
                 `.trim();
                 
@@ -76,7 +77,7 @@ function generateCards(data, container, useTechInDate = false) {
         card.innerHTML = `
             <h3>${item.title}</h3>
             ${detailsLine}
-            <p>${item.description}</p>
+            ${marked.parse(item.description)}
             ${techLine}
         `;
 
@@ -88,4 +89,4 @@ const experienceContainer = document.getElementById('experience-container');
 const projectsContainer = document.getElementById('projects-container');
 
 generateWorkExperience(workExperience, experienceContainer);
-generateCards(personalProjects, projectsContainer, true);
+generateCards(personalProjects, projectsContainer, false);
