@@ -1,3 +1,14 @@
+export enum ProjectAlignment {
+    FlexStart = 'flex-start',
+    FlexEnd = 'flex-end'
+}
+
+export enum CardColorClass {
+    Dark = 'card-dark',
+    Medium = 'card-medium'
+}
+
+
 import { Company, SubProject } from '../data.js';
 import { marked } from '../marked.esm.js';
 
@@ -6,10 +17,15 @@ import { marked } from '../marked.esm.js';
  * @param {SubProject} subProject - The sub-project data.
  * @returns {HTMLElement} The created sub-project card element.
  */
-export function createSubProjectCard(subProject: SubProject, projectCardColorClass: string, projectAlignment: string): HTMLElement {
+export function createSubProjectCard(
+        subProject: SubProject, 
+        projectCardColorClass: string, 
+        projectAlignment: ProjectAlignment)
+        : HTMLElement {
     const subProjectCard = document.createElement('div');
-    subProjectCard.classList.add('card', 'card-subproject', projectCardColorClass);
-    if (projectAlignment === 'flex-end') {
+        subProjectCard.classList.add('card', 'card-subproject', projectCardColorClass);
+
+    if (projectAlignment === ProjectAlignment.FlexEnd) {
         subProjectCard.style.marginLeft = 'auto';
     }
     

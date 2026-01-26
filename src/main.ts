@@ -1,7 +1,7 @@
 import { workExperience, personalProjects, Company, SubProject } from './data.js';
 import { createCompanyHeader } from './components/companyHeader.js';
 import { createProjectHeader } from './components/projectHeader.js';
-import { createSubProjectCard } from './components/subProjectCard.js';
+import { createSubProjectCard, ProjectAlignment, CardColorClass } from './components/subProjectCard.js';
 
 function generateWorkExperience(workExperienceData: Company[], container: HTMLElement) {
     
@@ -10,8 +10,8 @@ function generateWorkExperience(workExperienceData: Company[], container: HTMLEl
         container.appendChild(companyHeader);
         
         company.projects.forEach((project, projectIndex) => {
-            const projectAlignment = projectIndex % 2 === 0 ? 'flex-start' : 'flex-end';
-            const projectCardColorClass = projectIndex % 2 === 0 ? 'card-dark' : 'card-medium';
+            const projectAlignment = projectIndex % 2 === 0 ? ProjectAlignment.FlexStart : ProjectAlignment.FlexEnd;
+            const projectCardColorClass = projectIndex % 2 === 0 ? CardColorClass.Dark : CardColorClass.Medium;
             
             const projectHeader = createProjectHeader(project, projectAlignment);
 
@@ -19,7 +19,6 @@ function generateWorkExperience(workExperienceData: Company[], container: HTMLEl
             
             project.subProjects.forEach((subProject) => {
                 const subProjectCard = createSubProjectCard(subProject, projectCardColorClass, projectAlignment);
-                
                 container.appendChild(subProjectCard);
             });
         });
@@ -28,8 +27,8 @@ function generateWorkExperience(workExperienceData: Company[], container: HTMLEl
 
 function generatePersonalProjects(data: SubProject[], container: HTMLElement, useTechInDate: boolean = false) {
     data.forEach((item, index) => {
-        const cardColorClass = index % 2 === 0 ? 'card-dark' : 'card-medium';
-        const projectAlignment = index % 2 === 0 ? 'flex-start' : 'flex-end';
+        const cardColorClass = index % 2 === 0 ? CardColorClass.Dark : CardColorClass.Medium;
+        const projectAlignment = index % 2 === 0 ? ProjectAlignment.FlexStart : ProjectAlignment.FlexEnd;
         const card = createSubProjectCard(item, cardColorClass, projectAlignment);
         container.appendChild(card);
     });
