@@ -31,12 +31,16 @@ pub fn app() -> Html {
                             <>
                                 <CompanyHeader company={company.clone()} />
                                 {company.projects.iter().enumerate().map(|(project_index, project)| {
+                                    let project_color = if project_index % 2 == 0 { "card-dark" } else { "card-medium" };
                                     html! {
                                         <>
                                             <ProjectHeader project={project.clone()} />
                                             {project.sub_projects.iter().map(|sub_project| {
                                                 html! {
-                                                    <SubProjectCard sub_project={sub_project.clone()} />
+                                                    <SubProjectCard 
+                                                        sub_project={sub_project.clone()} 
+                                                        color_class={project_color.to_string()}
+                                                    />
                                                 }
                                             }).collect::<Html>()}
                                         </>
@@ -54,8 +58,12 @@ pub fn app() -> Html {
                 </header>
                 <div id="projects-container" class="card-list card-list--bleed">
                     {personal_projects.iter().enumerate().map(|(index, project)| {
+                        let project_color = if index % 2 == 0 { "card-dark" } else { "card-medium" };
                         html! {
-                            <SubProjectCard sub_project={project.clone()} />
+                            <SubProjectCard 
+                                sub_project={project.clone()} 
+                                color_class={project_color.to_string()}
+                            />
                         }
                     }).collect::<Html>()}
                 </div>

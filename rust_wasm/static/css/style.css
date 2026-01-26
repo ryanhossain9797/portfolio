@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'Oxanium Variable';
+    src: url('fonts/oxanium_variable.ttf') format('truetype');
+    font-weight: 200 900; /* Assuming it's a variable font with a wide weight range */
+    font-display: swap; /* Improve page load performance */
+}
+
+:root {
+    --light-card-color: #9DB375;
+    --dark-card-color: #2B3C2C;
+    --binder-background-color: #E2E8BC;
+}
+
+body {
+    background-color: #1E241F;
+    font-family: 'Oxanium Variable', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.binder-page {
+    background-color: var(--binder-background-color); /* Light paper color */
+    max-width: 1000px; /* Reduced width for better centering */
+    margin: 2rem auto; /* Center the container */
+    padding: 3rem 4rem; /* Increased horizontal padding */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Offset shadow for raised effect */
+    color: #3d3d3d; /* Dark text for the light background */
+}
+
+/* Main page header */
+.binder-page > header {
+    text-align: left;
+    margin-bottom: 2rem; /* Reduced margin */
+    border-bottom: 1px solid #c0c0c0; /* Keep main header underline */
+    padding-bottom: 1rem; /* Reduced padding */
+}
+
+/* Section headers */
+.experience-section > header,
+.projects-section > header {
+    border-bottom: none; /* Remove underline from section headers */
+    padding-bottom: 0.5rem; /* Small padding */
+    margin-bottom: 2rem; /* Increase margin for more spacing */
+}
+
+/* Specific styling for section headers */
+.experience-section header h2,
+.projects-section header h2 {
+    font-size: 2.2rem; /* Smaller than main H1 */
+    margin-bottom: 0.5rem; /* Reduced margin */
+    border: none; /* Remove underline */
+}
+
+h1 {
+    font-size: 4.5rem; /* Much bigger font size */
+    font-weight: 200;
+    margin: 0;
+    letter-spacing: 0.02em; /* Increased letter spacing */
+    color: #212529; /* Darker color for header on light background */
+}
+
+h2 {
+    font-size: 1.8rem; /* Much bigger font size */
+    font-weight: 200;
+    margin: 0.5rem 0 0 0; /* Added top margin */
+    letter-spacing: 0.05em; /* Increased letter spacing */
+    color: #666; /* Slightly darker color for subtitle on light background */
+}
+
+/* Consistent container for card lists */
+.card-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modifier class for the "bleed" effect */
+.card-list--bleed {
+    margin-left: -6rem; /* Extend left */
+    margin-right: -6rem; /* Extend right */
+    /* Removed padding-left and padding-right to enable bleed */
+}
+
+.card {
+    padding: 3.5rem; /* Increased padding */
+    margin-bottom: 2.5rem; /* Increased margin */
+    border: none; /* Remove borders from all cards */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Offset shadow for raised effect */
+    transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0,0,0,0.10);
+    transform: translate(5px, 5px) scale(1.025);
+    /* Keep width and color unchanged on hover */
+}
+
+/* Generic alternating alignment for any card list */
+.card-list .card:nth-child(even) {
+    align-self: flex-end;
+}
+
+.card-list .card:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.card-dark {
+    background-color: var(--dark-card-color);
+    color: var(--binder-background-color); /* Restore original text color for dark cards */
+}
+
+.card-medium {
+    background-color: var(--light-card-color);
+    color: #000000; /* Black text for light cards */
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem; /* Increased margin */
+    font-size: 1.4rem; /* Increased font size */
+    font-weight: 200;
+    letter-spacing: 0.03em; /* Increased letter spacing */
+    /* Color handled by parent .card or specific .card-medium */
+}
+
+.card p {
+    margin-bottom: 0.5rem; /* Added margin */
+    line-height: 1.8; /* Increased line height */
+    /* Color handled by parent .card or specific .card-medium */
+}
+
+.card p strong {
+    font-weight: 200;
+    /* Color handled by parent .card or specific .card-medium */
+}
+
+/* Company header styling (not a card) */
+.company-header {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.company-header h3 {
+    font-size: 3rem;
+    font-weight: 200;
+    margin: 0 0 0.5rem 0;
+    color: #3d3d3d;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.company-header p {
+    margin: 0;
+    color: #666;
+    font-size: 1.5rem;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #c0c0c0;
+    margin: 2rem 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.project-header {
+    margin: 1.5rem 4rem 1rem 4rem;
+    padding: 0;
+}
+
+.project-header h3 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 0 0 0.5rem 0;
+    color: #3d3d3d;
+    letter-spacing: 0.03em;
+}
+
+.project-header h4 {
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin: 0 0 0.5rem 0;
+    color: #3d3d3d;
+    letter-spacing: 0.03em;
+}
+
+.project-header p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Subproject card styling */
+.card-subproject {
+    margin-left: calc(2rem - 2rem); /* Start at project header position, then extend left */
+    margin-bottom: 1.5rem;
+    width: calc(75% + 2rem); /* Wider to allow left bleed */
+    padding-left: calc(3.5rem + 2rem); /* Extra padding on left to maintain content alignment */
+}
+
+.card-subproject h4 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    letter-spacing: 0.03em;
+}
