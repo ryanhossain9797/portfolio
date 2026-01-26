@@ -1,3 +1,34 @@
+/**
+ * @typedef {object} SubProject
+ * @property {string} [projectName] - The name of the sub-project.
+ * @property {string} description - A description of the sub-project, can be markdown formatted.
+ * @property {string} [tech] - The technologies used in the sub-project.
+ */
+
+/**
+ * @typedef {object} Project
+ * @property {string} name - The name of the project.
+ * @property {string} title - The user's role/title in this project.
+ * @property {string} dates - The start and end dates for this project.
+ * @property {SubProject[]} subProjects - An array of sub-projects.
+ */
+
+/**
+ * @typedef {object} Company
+ * @property {string} companyName - The name of the company.
+ * @property {string} startDate - The start date of employment.
+ * @property {string} endDate - The end date of employment.
+ * @property {Project[]} projects - An array of projects undertaken at this company.
+ */
+
+/**
+ * @typedef {object} PersonalProject
+ * @property {string} title - The title of the personal project.
+ * @property {string} description - A description of the personal project, can be markdown formatted.
+ * @property {string} tech - The technologies used in the personal project.
+ */
+
+/** @type {Company[]} */
 export const workExperience = [
     {
         companyName: "Chaldal",
@@ -96,6 +127,7 @@ export const workExperience = [
     }
 ];
 
+/** @type {PersonalProject[]} */
 export const personalProjects = [
     {
         title: "Home Automation Chatbot",

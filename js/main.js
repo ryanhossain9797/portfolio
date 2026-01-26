@@ -1,10 +1,14 @@
 import { workExperience, personalProjects } from './data.js';
 import { marked } from './marked.esm.js';
+import './data.js';/**
 
+/**
+ * @param {import('./data.js').Company[]} workExperienceData
+ * @param {HTMLElement} container
+ */
 function generateWorkExperience(workExperienceData, container) {
     
-    workExperienceData.forEach((company, companyIndex) => {
-        // Company header (not a card, just a header)
+    workExperienceData.forEach((company) => {
         const companyHeader = document.createElement('div');
         companyHeader.classList.add('company-header');
         companyHeader.innerHTML = `
@@ -53,6 +57,12 @@ function generateWorkExperience(workExperienceData, container) {
     });
 }
 
+/**
+ * Generates and displays cards based on provided data.
+ * @param {import('./data.js').PersonalProject[]} data - An array of project data (PersonalProject[] in this context).
+ * @param {HTMLElement} container - The HTML element to append the generated cards to.
+ * @param {boolean} [useTechInDate=false] - Whether to include tech information in the date line.
+ */
 function generateCards(data, container, useTechInDate = false) {
     data.forEach((item, index) => {
         const card = document.createElement('div');
