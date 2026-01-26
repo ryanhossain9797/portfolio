@@ -27,21 +27,9 @@ pub fn sub_project_card(props: &Props) -> Html {
     
     html! {
         <div class={format!("card card-subproject {}", color_class)}>
-            {if let Some(ref name) = sub_project.project_name {
-                html! {
-                    <h4>{ name }</h4>
-                }
-            } else {
-                html! {}
-            }}
+            <h4>{ sub_project.project_name }</h4>
             <div class="description">{ render_markdown(&sub_project.description) }</div>
-            {if let Some(ref tech) = sub_project.tech {
-                html! {
-                    <p><em>{ tech }</em></p>
-                }
-            } else {
-                html! {}
-            }}
+            <p><em>{ sub_project.tech }</em></p>
         </div>
     }
 }

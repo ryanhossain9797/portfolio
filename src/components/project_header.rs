@@ -11,9 +11,9 @@ pub fn project_header(props: &Props) -> Html {
     let project = &props.project;
     html! {
         <div class="project-header">
-            <h3>{ &project.name }</h3>
-            <h4>{ &project.title }</h4>
-            <p>{ &project.dates }</p>
+            <h3>{ project.name }</h3>
+            <h4>{ project.title }</h4>
+            <p>{ project.dates }</p>
         </div>
     }
 }
