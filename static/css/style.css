@@ -118,7 +118,7 @@ h4 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.15) 0.8px, transparent 1.2px);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.15) 0.6px, transparent 1.0px);
     background-size: 8px 8px;
     pointer-events: none;
     z-index: 0;

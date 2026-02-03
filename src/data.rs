@@ -35,7 +35,11 @@ pub fn get_work_experience() -> Vec<Company> {
                     sub_projects: vec![
                         SubProject {
                             project_name: "GIS Platform",
-                            description: "- Led development of Chaldal's GIS platform for logistics and delivery optimization.\n- Eliminated last mile address issues, reducing delivery delays by 20%.\n- Integrated OpenStreetMap data and augmented building data with key attributes using mapping agents.\n- Implemented address management and AI-powered building tagging and issue detection features to pre-emptively flag suspicious data.",
+                            description: r#"
+- Led development of Chaldal's GIS platform for logistics and delivery optimization.
+- Eliminated last mile address issues, reducing delivery delays by 20%.
+- Integrated OpenStreetMap data and augmented building data with key attributes using mapping agents.
+- Implemented address management and AI-powered building tagging and issue detection features to pre-emptively flag suspicious data."#,
                             tech: vec![
                                 "F#",
                                 "C#",
@@ -51,7 +55,9 @@ pub fn get_work_experience() -> Vec<Company> {
                         },
                         SubProject {
                             project_name: "Self Hosted OSM Server",
-                            description: "- Developed a self-hosted OSM server to eliminate dependency on public servers and enhance performance.\n- Hosted on a dedicated server, ensuring accessibility for the entire team.",
+                            description: r#"
+- Developed a self-hosted OSM server to eliminate dependency on public servers and enhance performance.
+- Hosted on a dedicated server, ensuring accessibility for the entire team."#,
                             tech: vec!["Linux", "OSM", "Docker", "Azure DevOps"],
                         },
                     ],
@@ -62,7 +68,13 @@ pub fn get_work_experience() -> Vec<Company> {
                     dates: "07/2022 - 07/2024",
                     sub_projects: vec![SubProject {
                         project_name: "ChaldalPay",
-                        description: "- Led development of ChaldalPay e-wallet and unified payment gateway.\n- Integrated multiple banks, merchants, and utility providers, processing 5000+ daily transactions.\n- Reduced processing time by 40% and cut payment charges by 2%.\n- Architected distributed payment gateway using Subject (Chaldal's in-house F# and Microsoft Orleans framework), achieving 99.99% uptime and transaction lock-free concurrency.\n- Led a team of 4 engineers.\n- Led security compliance initiatives including PCI-DSS and Bangladesh Bank audits.",
+                        description: r#"
+- Led development of ChaldalPay e-wallet and unified payment gateway.
+- Integrated multiple banks, merchants, and utility providers, processing 5000+ daily transactions.
+- Reduced processing time by 40% and cut payment charges by 2%.
+- Architected distributed payment gateway using Subject (Chaldal's in-house F# and Microsoft Orleans framework), achieving 99.99% uptime and transaction lock-free concurrency.
+- Led a team of 4 engineers.
+- Led security compliance initiatives including PCI-DSS and Bangladesh Bank audits."#,
                         tech: vec![
                             "F#",
                             "C#",
@@ -81,7 +93,10 @@ pub fn get_work_experience() -> Vec<Company> {
                     sub_projects: vec![
                         SubProject {
                             project_name: "Chaldal Pharmacy",
-                            description: "- Architected Chaldal Pharmacy, handling 1000+ daily pharmacy orders with specialized pharmaceutical constraints.\n- Managed delicate access requirements for Rx and other categories, frozen items, and special QC environments for medication.\n- Implemented cross-warehouse movement to transfer pharmacy goods for last-mile delivery.",
+                            description: r#"
+- Architected Chaldal Pharmacy, handling 1000+ daily pharmacy orders with specialized pharmaceutical constraints.
+- Managed delicate access requirements for Rx and other categories, frozen items, and special QC environments for medication.
+- Implemented cross-warehouse movement to transfer pharmacy goods for last-mile delivery."#,
                             tech: vec![
                                 "C#",
                                 ".NET Core",
@@ -92,7 +107,10 @@ pub fn get_work_experience() -> Vec<Company> {
                         },
                         SubProject {
                             project_name: "Warehouse Management",
-                            description: "- Led development of Chaldal's massive export warehouse project at Hemayetpur.\n- Reimplemented stock requirement prediction algorithm in raw SQL to improve performance by 3x and accuracy by 10%.",
+                            description: r#"
+- Led development of Chaldal's massive export warehouse project at Hemayetpur.
+- Reimplemented stock requirement prediction algorithm in raw SQL to improve performance by 3x and accuracy by 10%.
+                            "#,
                             tech: vec![
                                 "C#",
                                 ".NET Core",
@@ -110,12 +128,14 @@ pub fn get_work_experience() -> Vec<Company> {
             start_date: "03/2020",
             end_date: "06/2020",
             projects: vec![Project {
-                name: "Upskill Mobile App",
+                name: "Flutter App Developer",
                 title: "App and Backend Developer",
                 dates: "03/2020 - 06/2020",
                 sub_projects: vec![SubProject {
                     project_name: "Mobile App",
-                    description: "- Developed and maintained Upskill, a mobile app for learning and skill development.",
+                    description: r#"
+- Developed and maintained Upskill, a mobile app for learning and skill development.
+- Onboarded 3 clients to the Upskill Skill Assessment platform"#,
                     tech: vec!["Flutter", "Dart", "Golang", "PostgreSQL"],
                 }],
             }],
@@ -127,7 +147,10 @@ pub fn get_personal_projects() -> Vec<SubProject> {
     vec![
         SubProject {
             project_name: "Home Automation Chatbot",
-            description: "- Built a cross-platform chatbot for home automation on Discord and Telegram using Ollama.\n- Implemented an actor-based state machine architecture using Tokio tasks and mpsc channels.\n- Achieved over 95% intent recognition and tool call accuracy with Local Ollama and Gemini API models.",
+            description: r#"
+- Built a cross-platform chatbot for home automation on Discord and Telegram using Ollama.
+- Implemented an actor-based state machine architecture using Tokio tasks and mpsc channels.
+- Achieved over 95% intent recognition and tool call accuracy with Local Ollama and Gemini API models."#,
             tech: vec![
                 "Rust",
                 "Tokio",
@@ -141,7 +164,9 @@ pub fn get_personal_projects() -> Vec<SubProject> {
         },
         SubProject {
             project_name: "Home Server Infrastructure",
-            description: "- Personal home server running 10+ services, including local LLMs on Docker containers inside Proxmox VMs.\n- Implemented CI/CD pipeline using Azure DevOps.",
+            description: r#"
+- Personal home server running 10+ services, including local LLMs on Docker containers inside Proxmox VMs.
+- Implemented CI/CD pipeline using Azure DevOps."#,
             tech: vec![
                 "Proxmox",
                 "Docker",
