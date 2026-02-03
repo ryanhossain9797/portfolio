@@ -1,10 +1,10 @@
-pub mod data;
 mod components;
+pub mod data;
 
-use yew::prelude::*;
-use wasm_bindgen::prelude::wasm_bindgen;
-use data::{get_work_experience, get_personal_projects};
 use components::{CompanyHeader, ProjectHeader, SubProjectCard};
+use data::{get_personal_projects, get_work_experience};
+use wasm_bindgen::prelude::wasm_bindgen;
+use yew::prelude::*;
 
 #[wasm_bindgen]
 extern "C" {}
@@ -24,12 +24,11 @@ pub fn app() -> Html {
                 .enumerate()
                 .flat_map(|(project_index, project)| {
                     let project_header = html! { <ProjectHeader project={project.clone()} /> };
-                    let project_color = if project_index % 2 == 0 { "card-left" } else { "card-right" };
                     let sub_project_elements = project
                         .sub_projects
                         .iter()
                         .map(|sub_project| {
-                            html! {<SubProjectCard sub_project={sub_project.clone()} color_class={project_color.to_string()} />}
+                            html! {<SubProjectCard sub_project={sub_project.clone()} />}
                         })
                         .collect::<Vec<Html>>();
                     std::iter::once(project_header).chain(sub_project_elements.into_iter())
@@ -39,16 +38,12 @@ pub fn app() -> Html {
         })
         .collect();
 
-    let personal_exp_elements: Vec<Html> = 
-        personal_projects
-            .iter()
-            .enumerate()
-            .map(|(project_index, sub_project)| {
-                let project_color = if project_index % 2 == 0 { "card-left" } else { "card-right" };
-
-                html! { <SubProjectCard sub_project={sub_project.clone()} color_class={project_color.to_string()} /> }
-            })
-            .collect();
+    let personal_exp_elements: Vec<Html> = personal_projects
+        .iter()
+        .map(|sub_project| {
+            html! { <SubProjectCard sub_project={sub_project.clone()} /> }
+        })
+        .collect();
 
     html! {
         <div class="binder-page">
