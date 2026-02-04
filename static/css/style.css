@@ -84,10 +84,11 @@ h4 {
 .experience-section>header h2,
 .projects-section>header h2 {
     font-family: 'Space Mono', monospace;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: 1px;
     opacity: 0.8;
+    text-align: center;
 }
 
 /* Card Styling - career_pages beige card style */
@@ -169,7 +170,7 @@ h4 {
 }
 
 .company-header h3 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: var(--color-fg);
     margin-bottom: 0.5rem;
@@ -180,6 +181,13 @@ h4 {
     font-weight: 700;
     font-size: 0.9rem;
     color: var(--color-muted);
+}
+
+.company-header hr {
+    border: none;
+    border-bottom: 1px solid #333;
+    margin: 1rem 0;
+    width: 100%;
 }
 
 /* Project Header */
@@ -245,4 +253,80 @@ hr {
     border-bottom: 1px solid #333;
     margin: 2rem 0;
     width: 100%;
+}
+
+/* Resume Header - from Resume.html, styled to match site aesthetic */
+.resume-header {
+    margin-bottom: 2rem;
+    font-family: 'Space Mono', monospace;
+}
+
+.resume-header .header {
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.resume-header .header h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.resume-header .summary {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: var(--color-beige);
+    border-radius: 4px;
+}
+
+.resume-header .summary p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-card-text);
+    margin: 0 0 1rem 0;
+}
+
+.resume-header .summary .card-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.resume-header .tag {
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--color-card-text);
+    padding: 4px 10px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.resume-header .tag::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: currentColor;
+}
+
+.resume-header .tag.link {
+    background: var(--color-card-text);
+    color: var(--color-beige);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.resume-header .tag.link:hover {
+    background: #ffffff;
+    color: #000000;
+    transform: translateY(-2px);
 }

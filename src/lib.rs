@@ -1,7 +1,7 @@
 mod components;
 pub mod data;
 
-use components::{CompanyHeader, ProjectHeader, SubProjectCard};
+use components::{CompanyHeader, ProjectHeader, ResumeHeader, SubProjectCard};
 use data::{get_personal_projects, get_work_experience};
 use wasm_bindgen::prelude::wasm_bindgen;
 use yew::prelude::*;
@@ -47,10 +47,7 @@ pub fn app() -> Html {
 
     html! {
         <div class="binder-page">
-            <header>
-                <h1>{ "Kazi Raiyan Hossain" }</h1>
-                <h2>{ "Technical Lead & .NET Developer" }</h2>
-            </header>
+            <ResumeHeader />
 
             <section class="experience-section">
                 <header><h2>{ "Work Experience" }</h2></header>

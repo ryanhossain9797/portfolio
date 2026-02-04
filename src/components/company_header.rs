@@ -1,5 +1,5 @@
-use yew::prelude::*;
 use crate::data::Company;
+use yew::prelude::*;
 
 #[derive(Properties, Clone, PartialEq)]
 pub struct Props {
@@ -13,6 +13,7 @@ pub fn company_header(props: &Props) -> Html {
         <div class="company-header">
             <h3>{ company.company_name }</h3>
             <p><strong>{ format!("{} - {}", company.start_date, company.end_date) }</strong></p>
+            <hr />
         </div>
     }
 }

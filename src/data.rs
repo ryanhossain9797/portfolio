@@ -29,7 +29,7 @@ pub fn get_work_experience() -> Vec<Company> {
             end_date: "12/2025",
             projects: vec![
                 Project {
-                    name: "Geographic Information Systems (GIS) Platform",
+                    name: "Geographic Information Systems (GIS)",
                     title: "Technical Lead, Geographic Information Systems (GIS) Team",
                     dates: "08/2024 - 12/2025",
                     sub_projects: vec![
@@ -45,19 +45,29 @@ pub fn get_work_experience() -> Vec<Company> {
                                 "C#",
                                 ".NET Core",
                                 "Python",
+                                "React",
                                 "SQL Server",
                                 "Redis",
                                 "OpenStreetMaps",
                                 "Docker",
                                 "React Leaflet",
                                 "Azure DevOps",
+                                "Protobuf",
                             ],
+                        },
+                        SubProject {
+                            project_name: "OSM Batching Tool",
+                            description: r#"
+- Built to batch Bangladesh's entire OSM XML data dump into small chunks in 10 minutes.
+- Capable of handling both full OSM data import and also daily delta import."#,
+                            tech: vec!["Tokio", "Reqwest", "Quick-XML", "Protobuf"],
                         },
                         SubProject {
                             project_name: "Self Hosted OSM Server",
                             description: r#"
 - Developed a self-hosted OSM server to eliminate dependency on public servers and enhance performance.
-- Hosted on a dedicated server, ensuring accessibility for the entire team."#,
+- Hosted on an internal server, ensuring accessibility for the entire team.
+- Tuned custom theme for maximum user familiarity"#,
                             tech: vec!["Linux", "OSM", "Docker", "Azure DevOps"],
                         },
                     ],
